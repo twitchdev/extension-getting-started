@@ -9,16 +9,16 @@ Twitch Extensions are programmable interactive overlays and panels, which help s
 
 This guide will cover the fundamentals of building your first Extension. It will allow viewers to cycle through display colors via a component overlay. On the frontend, a user clicks a button that changes the color of a circle. Instead of changing the CSS locally, it calls its Extension Backend Service (EBS) for a new hex value.  
 
-[insert screenshot]
+<img src="https://github.com/twitchdev/extension-getting-started/blob/master/Extension-Rig-Banner.png" width="45%">
 
 ## Developer Rig 
 
-The recommended path for building this sample is with the [Developer Rig](https://github.com/twitchdev/developer-rig). (insert about dev rig)
+The recommended path for building this sample is with the [Developer Rig](https://github.com/twitchdev/developer-rig). The Developer Rig allows Extensions developers to develop and test Extensions quickly, easily, and locally. It is a lightweight web app that runs in a browser and lets you test with production APIs and hosted assets on Twitch. 
 
 
 ## Setup
 
-1. [Download]() and install the Rig.  
+1. Download [Mac OSX](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig-0.9.3.dmg) [Windows](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig+Setup+0.9.3.exe) and install the Rig.  
 2. Create an Extension in your [Developer Dashabord](https://dev.twitch.tv/dashboard/extensions)
 3. After clicking, "Create Extension" give it a name and click the Video - Component checkbox under Type of Extension.
 4. Select you are using the Developer Rig and fill in the remaining details. 
