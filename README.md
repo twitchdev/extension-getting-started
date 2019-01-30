@@ -1,25 +1,24 @@
-# Twitch Getting Started with Extensions
+# Getting Started with Twitch Extensions
 
 
 ## Extensions Overview
 
-Twitch Extensions are programmable interactive overlays and panels, which help streamers interact with their viewers. The Twitch community can interact in new ways such as heat maps, real-time game data overlays, mini-games, music requests, and leaderboards. If you haven't seen an Extension, check out the [TwitchDev channel](https://www.twitch.tv/twitchdev) and view the Twitter Panel Extension beneath the video display.
+[Twitch Extensions](https://twitch.tv/p/extensions) are programmable interactive overlays and panels, which help streamers interact with their viewers. The Twitch community can interact in new ways such as heat maps, real-time game data overlays, mini-games, music requests, and leaderboards. If you haven't seen an Extension, check out the [TwitchDev channel page](https://www.twitch.tv/twitchdev) and view the Twitter panel Extension beneath the video player.
 
-## Getting Started
+## What Are We Building?
 
-This guide will cover the fundamentals of building your first Extension. It will allow viewers to cycle through display colors via a component overlay. On the frontend, a user clicks a button that changes the color of a circle. Instead of changing the CSS locally, it calls its Extension Backend Service (EBS) for a new hex value.  
+This guide will cover the fundamentals of building your first Extension. It will allow Twitch viewers to cycle through colors via a visual element added on top of the video player (we call this a component overlay). On the frontend, a user clicks a button that changes the color of a circle. Instead of changing the CSS locally, it makes a call to a backend server for a new hex value (we call this an Extension Backend Service or EBS for short).
 
 [insert screenshot]
 
 ## Developer Rig 
 
-The recommended path for building this sample is with the [Developer Rig](https://github.com/twitchdev/developer-rig). (insert about dev rig)
-
+The recommended path for building this sample is with the Twitch Developer Rig. This is a native application to help with your development. The following steps will help you download, install, and set up the Rig.
 
 ## Setup
 
-1. [Download]() and install the Rig.  
-2. Create an Extension in your [Developer Dashabord](https://dev.twitch.tv/dashboard/extensions)
+1. Download the Developer Rig for [Mac](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig-0.9.3.dmg) or [Windows](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig+Setup+0.9.3.exe), then install the Rig. Linux will be available soon.
+2. Create an Extension in your [Developer Dashabord](https://dev.twitch.tv/dashboard/extensions). Note that you need to have two factor authentication enabled.
 3. After clicking, "Create Extension" give it a name and click the Video - Component checkbox under Type of Extension.
 4. Select you are using the Developer Rig and fill in the remaining details. 
 5. Create the Extension.
