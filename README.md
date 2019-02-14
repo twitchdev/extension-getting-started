@@ -19,7 +19,7 @@ The recommended path for building this sample is with the [Developer Rig](https:
 ## Setup
 
 1. Download [Mac OSX](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig-0.9.3.dmg) || [Windows](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig+Setup+0.9.3.exe) and install the Rig.  
-2. Create an Extension in your [Developer Dashabord](https://dev.twitch.tv/dashboard/extensions)
+2. Create an Extension in your [Developer Dashboard](https://dev.twitch.tv/dashboard/extensions)
 3. After clicking, "Create Extension" give it a name and click the Video - Component checkbox under Type of Extension.
 4. Select you are using the Developer Rig and fill in the remaining details. 
 5. Create the Extension.
