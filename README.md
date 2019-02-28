@@ -10,7 +10,7 @@ This guide will cover the fundamentals of building your first Extension. It will
 
 <img src="https://github.com/twitchdev/extension-getting-started/blob/master/Extension-Rig-Banner.png" width="45%">
 
-## Developer Rig 
+## What's the Twitch Developer Rig?
 
 The recommended path for building this sample is with the Twitch Developer Rig. This is a native application to help with your development. The following steps will help you download, install, and set up the Rig.
 
