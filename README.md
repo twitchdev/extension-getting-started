@@ -37,7 +37,7 @@ The recommended path for building this sample is with the Twitch Developer Rig. 
 9. Ensure the view type is "Component" and give it a label such as "main". Click "Save."
 10. You should now see the Hello World Extension running on a simulated video player. Experiement with the Extension by cycling through colors with the button within the component.
 
-## Building the App
+## A Closer Look
 
 ### Extension Architecture
 
@@ -49,7 +49,7 @@ The recommended path for building this sample is with the Twitch Developer Rig. 
     * Validates an Extension JWT
     * Returns a new color using the `/cycle/color` endpoint
 
-## Frontend
+### Frontend
 
 Let's dive into the frontend components. The HTML files allow this Extension to be run as any [Extension type](https://dev.twitch.tv/docs/extensions/required-technical-background/#types-of-extensions): overlay, component or panel. In this example, we are using a component so `video_component.html` will be rendered. 
 
@@ -72,7 +72,7 @@ When the viewer presses the button, the onClick hanlder creates a POST request t
 
 `$('#color').css('background-color', hex);`
 
-## Backend
+### Backend
 
 Our backend logic is contained in `backend.js`. Using `[hapi`](https://hapijs.com/), we are able to spin up a light webserver. Hapi handles hosting our GET endpoint `/color/query` and POST endpoint `/color/cycle`. These endpoints then route to either `colorCycleHandler` or `colorQueryHandler`. 
 
