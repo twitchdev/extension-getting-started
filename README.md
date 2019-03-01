@@ -51,7 +51,7 @@ The recommended path for building this sample is with the Twitch Developer Rig. 
 
 ### Frontend
 
-Let's dive into the frontend components. The HTML files allow this Extension to be run as any [Extension type](https://dev.twitch.tv/docs/extensions/required-technical-background/#types-of-extensions): overlay, component or panel. In this example, we are using a component so `video_component.html` will be rendered. 
+Let's dive into the frontend components. The HTML files allow this Extension to be run as any [Extension type](https://dev.twitch.tv/docs/extensions/required-technical-background/#types-of-extensions): overlay, component, or panel. In this example, we are using a component so `video_component.html` will be rendered. 
 
 The frontend logic is handled by `viewer.js`. The core functions here are 1) handing authentication 2) making GET/POST requests to our EBS. On first load, `twitch.onAuthorized` enables the button, sets our auth token and dispatches the GET request to retrieve the inital color.
 
@@ -120,4 +120,3 @@ function colorCycleHandler (req) {
 
 ## Next Steps
 * Read our [Extensions documentation](https://dev.twitch.tv/docs/extensions) and continue developing with the Twitch Developer Rig
-* View our next chapters: adding Extensions to your channel, PubSub, etc...
