@@ -39,12 +39,14 @@ The recommended path for building this sample is with the Twitch Developer Rig. 
 
 ## A Closer Look
 
+*Add intro sentence here*
+
 ### Extension Architecture
 
-1. Extension Frontend – comprised of HTML files for the different Extension views and corresponding JavaScript files and CSS. The frontend has the following functionality:
+1. Extension Frontend – comprised of HTML files for the different Extension views as well as corresponding JavaScript and CSS files. The frontend for the Hello World Extension you are currently running has the following functionality:
     * A button and script (`viewer.js`) that makes a POST call to the EBS to request a color change for the circle.
     * A GET call when the Extension is initialized to change the circle to the current color stored on the EBS.
-2. Extension Backend – EBS that performs the following functionality:
+2. Extension Backend – An EBS that performs the following functionality:
     * Spins up a simple HTTPS server with a POST handler for changing color
     * Validates an Extension JWT
     * Returns a new color using the `/cycle/color` endpoint
@@ -53,7 +55,7 @@ The recommended path for building this sample is with the Twitch Developer Rig. 
 
 Let's dive into the frontend components. The HTML files allow this Extension to be run as any [Extension type](https://dev.twitch.tv/docs/extensions/required-technical-background/#types-of-extensions): overlay, component, or panel. In this example, we are using a component so `video_component.html` will be rendered. 
 
-The frontend logic is handled by `viewer.js`. The core functions here are 1) handing authentication 2) making GET/POST requests to our EBS. On first load, `twitch.onAuthorized` enables the button, sets our auth token and dispatches the GET request to retrieve the inital color.
+The frontend logic is handled by `viewer.js`. The two core functions are handling authentication and making GET/POST requests to our EBS. On first load, `twitch.onAuthorized` enables the button, sets our auth token, and dispatches the GET request to retrieve the inital color.
 
 ```
 twitch.onAuthorized(function (auth) {
@@ -65,16 +67,15 @@ twitch.onAuthorized(function (auth) {
   setAuth(token);
   $.ajax(requests.get);
 });
-
 ``` 
 
-When the viewer presses the button, the onClick hanlder creates a POST request to the `/color/cycle/` endpoint. On succesful response, `updateBlock()` is called passing the payload which contains a new hex value. `updateBlock()` simply renders the new hex value using CSS.
+When the viewer presses the button, the onClick handler creates a POST request to the `/color/cycle/` endpoint. On a succesful response, `updateBlock()` is called passing the payload which contains a new hex value. `updateBlock()` simply renders the new hex value using CSS.
 
 `$('#color').css('background-color', hex);`
 
 ### Backend
 
-Our backend logic is contained in `backend.js`. Using `[hapi`](https://hapijs.com/), we are able to spin up a light webserver. Hapi handles hosting our GET endpoint `/color/query` and POST endpoint `/color/cycle`. These endpoints then route to either `colorCycleHandler` or `colorQueryHandler`. 
+Our backend logic is contained in `backend.js`. Using [hapi](https://hapijs.com/), we are able to spin up a light webserver. Hapi handles hosting our GET endpoint `/color/query` and POST endpoint `/color/cycle`. These endpoints then route to either `colorCycleHandler` or `colorQueryHandler`. 
 
 Hapi makes this mapping easy: 
 
