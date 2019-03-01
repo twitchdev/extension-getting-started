@@ -77,7 +77,7 @@ When the viewer presses the button, the onClick hanlder creates a POST request t
 
 ## Backend
 
-Our backend logic is contained in `backend.js`. Using `[hapi`](https://hapijs.com/), we are able to spin up a light webserver. Hapi handles hosting our GET endpoint `/color/query` and POST endpoint `/color/cycle`. These endpoints then route to either `colorCycleHandler` or `colorQueryHandler`. 
+Our backend logic is contained in `backend.js`. Using [`hapi`](https://hapijs.com/), we are able to spin up a light webserver. Hapi handles hosting our GET endpoint `/color/query` and POST endpoint `/color/cycle`. These endpoints then route to either `colorCycleHandler` or `colorQueryHandler`. 
 
 Hapi makes this mapping easy: 
 
