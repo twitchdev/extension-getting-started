@@ -17,13 +17,6 @@ The recommended path for building this sample is with the Twitch Developer Rig. 
 
 ## Setup
 
-1. Download [Mac OSX](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig-0.9.3.dmg) || [Windows](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig+Setup+0.9.3.exe) and install the Rig.  
-2. Create an Extension in your [Developer Dashboard](https://dev.twitch.tv/dashboard/extensions)
-3. After clicking, "Create Extension" give it a name and click the Video - Component checkbox under Type of Extension.
-4. Select you are using the Developer Rig and fill in the remaining details. 
-5. Create the Extension.
-6. Record the `clientID` and `secretID` (can be found within settings). 
-
 1. Download the Developer Rig for [Mac](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig-0.9.3.dmg) or [Windows](https://s3-us-west-2.amazonaws.com/developer-rig-install-update-development/Twitch+Developer+Rig+Setup+0.9.3.exe), then open the downloaded file to install the Rig. Linux will be available soon.
 2. Visit the Extensions section of you [Developer Dashabord](https://dev.twitch.tv/dashboard/extensions). You will need to have a Twitch account to login and two factor authentication (2FA) will need to be activated. You will see a button prompting you with instructions if 2FA has not yet been activated.
 3. Click the "Create Extension" button on this page and you will be taken to a form to setup your new Extension.
