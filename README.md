@@ -129,3 +129,4 @@ function colorCycleHandler (req) {
 
 ## Next Steps
 * Read our [Extensions documentation](https://dev.twitch.tv/docs/extensions) and continue developing with the Twitch Developer Rig
+* Join our communities on [Twitter](https://twitter.com/twitchdev), [Discord](https://discordapp.com/invite/G8UQqNy) and the [Forums](https://discuss.dev.twitch.tv/) for help and to stay updated!
