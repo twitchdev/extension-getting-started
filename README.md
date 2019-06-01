@@ -34,9 +34,9 @@ The recommended path for building this sample is with the Twitch Developer Rig. 
 5. Below this, make sure "Use Existing Example" is selected. For this example, also make sure to select "Hello World" on the right side to automatically start with this repository's code.
 6. Click "Save."
 7. The Rig will host your frontend and backend logic for the Extension. To do this, click "Host with Rig" under "Host your front-end files." Then click "Activate" under "Back-end Run Command" to run the backend.
-8. Now the app should be ready for testing! Click on "Extension Views" in the left menu. This simulates a broadcaster's channel. Let's add a compoent overlay view to see our Extension by clicking "Create New View." 
+8. Now the app should be ready for testing! Click on "Extension Views" in the left menu. This simulates a broadcaster's channel. Let's add a component overlay view to see our Extension by clicking "Create New View." 
 9. Ensure the view type is "Component" and give it a label such as "main". Click "Save."
-10. You should now see the Hello World Extension running on a simulated video player. Experiement with the Extension by cycling through colors with the button within the component.
+10. You should now see the Hello World Extension running on a simulated video player. Experiment with the Extension by cycling through colors with the button within the component.
 
 ## A Closer Look
 
