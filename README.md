@@ -18,7 +18,7 @@ The recommended path for building this sample is with the Twitch Developer Rig. 
 ## Setup
 
 1. Download the Developer Rig for [Mac](https://link.twitch.tv/2u8BNNm), [Windows](https://link.twitch.tv/2JcsuGQ), or [Linux](https://link.twitch.tv/2F8hFjw). Then, open the downloaded file to install the Rig.
-2. Visit the Extensions section of you [Developer Dashabord](https://dev.twitch.tv/dashboard/extensions). You will need to have a Twitch account to login and two factor authentication (2FA) will need to be activated. You will see a button prompting you with instructions if 2FA has not yet been activated.
+2. Visit the Extensions section of you [Developer Dashboard](https://dev.twitch.tv/dashboard/extensions). You will need to have a Twitch account to login and two factor authentication (2FA) will need to be activated. You will see a button prompting you with instructions if 2FA has not yet been activated.
 3. Click the "Create Extension" button on this page and you will be taken to a form to setup your new Extension.
 4. Make sure you select "Video - Component" under the "Type Of Extension" section, check the box to indicate that you are using the Developer Rig, and fill out the remaining fields.
 5. Click "Create Extension" at the bottom of the form and you will be taken to a status page for the first version of this Extension.
@@ -34,13 +34,13 @@ The recommended path for building this sample is with the Twitch Developer Rig. 
 5. Below this, make sure "Use Existing Example" is selected. For this example, also make sure to select "Hello World" on the right side to automatically start with this repository's code.
 6. Click "Save."
 7. The Rig will host your frontend and backend logic for the Extension. To do this, click "Host with Rig" under "Host your front-end files." Then click "Activate" under "Back-end Run Command" to run the backend.
-8. Now the app should be ready for testing! Click on "Extension Views" in the left menu. This simulates a broadcaster's channel. Let's add a compoent overlay view to see our Extension by clicking "Create New View." 
+8. Now the app should be ready for testing! Click on "Extension Views" in the left menu. This simulates a broadcaster's channel. Let's add a component overlay view to see our Extension by clicking "Create New View."
 9. Ensure the view type is "Component" and give it a label such as "main". Click "Save."
-10. You should now see the Hello World Extension running on a simulated video player. Experiement with the Extension by cycling through colors with the button within the component.
+10. You should now see the Hello World Extension running on a simulated video player. Experiment with the Extension by cycling through colors with the button within the component.
 
 ## A Closer Look
 
-Now that you've built the app, let's take a look under the hood and explore how it works. 
+Now that you've built the app, let's take a look under the hood and explore how it works.
 
 ### Extension Architecture
 
@@ -48,15 +48,15 @@ Now that you've built the app, let's take a look under the hood and explore how 
     * A button and script (`viewer.js`) that makes a POST call to the EBS to request a color change for the circle.
     * A GET call when the Extension is initialized to change the circle to the current color stored on the EBS.
 2. Extension Backend – An EBS that performs the following functionality:
-    * Spins up a simple HTTPS server with a POST handler for changing color
-    * Validates an Extension JWT
-    * Returns a new color using the `/cycle/color` endpoint
+    * Spins up a simple HTTPS server with a POST handler for changing color.
+    * Validates an Extension JWT.
+    * Returns a new color using the `/cycle/color` endpoint.
 
 ### Frontend
 
-Let's dive into the frontend components. The HTML files allow this Extension to be run as any [Extension type](https://dev.twitch.tv/docs/extensions/required-technical-background/#types-of-extensions): overlay, component, or panel. In this example, we are using a component so `video_component.html` will be rendered. 
+Let's dive into the frontend components. The HTML files allow this Extension to be run as any [Extension type](https://dev.twitch.tv/docs/extensions/required-technical-background/#types-of-extensions): overlay, component, or panel. In this example, we are using a component so `video_component.html` will be rendered.
 
-The frontend logic is handled by `viewer.js`. The two core functions are handling authentication and making GET/POST requests to our EBS. On first load, `twitch.onAuthorized` enables the button, sets our auth token, and dispatches the GET request to retrieve the inital color.
+The frontend logic is handled by `viewer.js`. The two core functions are handling authentication and making GET/POST requests to our EBS. On first load, `twitch.onAuthorized` enables the button, sets our auth token, and dispatches the GET request to retrieve the initial color.
 
 ```
 twitch.onAuthorized(function (auth) {
@@ -68,7 +68,7 @@ twitch.onAuthorized(function (auth) {
   setAuth(token);
   $.ajax(requests.get);
 });
-``` 
+```
 
 When the viewer presses the button, the onClick handler creates a POST request to the `/color/cycle/` endpoint. On a succesful response, `updateBlock()` is called passing the payload which contains a new hex value. `updateBlock()` simply renders the new hex value using CSS.
 
@@ -76,9 +76,9 @@ When the viewer presses the button, the onClick handler creates a POST request t
 
 ### Backend
 
-Our backend logic is contained in `backend.js`. Using [hapi](https://hapijs.com/), we are able to spin up a light webserver. Hapi handles hosting our GET endpoint `/color/query` and POST endpoint `/color/cycle`. These endpoints then route to either `colorCycleHandler` or `colorQueryHandler`. 
+Our backend logic is contained in `backend.js`. Using [hapi](https://hapijs.com/), we are able to spin up a light webserver. Hapi handles hosting our GET endpoint `/color/query` and POST endpoint `/color/cycle`. These endpoints then route to either `colorCycleHandler` or `colorQueryHandler`.
 
-Hapi makes this mapping easy: 
+Hapi makes this mapping easy:
 
 ```
 (async () => {
@@ -121,5 +121,5 @@ function colorCycleHandler (req) {
 ```
 
 ## Next Steps
-* Read our [Extensions documentation](https://dev.twitch.tv/docs/extensions) and continue developing with the Twitch Developer Rig
+* Read our [Extensions documentation](https://dev.twitch.tv/docs/extensions) and continue developing with the Twitch Developer Rig.
 * Join our communities on [Twitter](https://twitter.com/twitchdev), [Discord](https://discordapp.com/invite/G8UQqNy) and the [Forums](https://discuss.dev.twitch.tv/) for help and to stay updated!
