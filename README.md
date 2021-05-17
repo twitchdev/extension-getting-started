@@ -9,7 +9,7 @@
 This guide will cover the fundamentals of building your first Extension. It will allow Twitch viewers to cycle through colors via a visual element added on top of the video player (we call this a component overlay). On the frontend, a user clicks a button in this component that changes the color of a circle. Instead of changing the CSS locally, it makes a call to a backend server for a new hex value (we call this an Extension Backend Service or EBS for short).
 
 ## What's the Twitch Developer Rig?
-<img src="https://github.com/twitchdev/extension-getting-started/blob/master/Extension-Rig-Banner.png" width="45%">
+<img src="https://github.com/twitchdev/extension-getting-started/raw/main/Extension-Rig-Banner.png" width="45%">
 
 The recommended path for building this sample is with the Twitch Developer Rig. This is a native application to help with your development. The following steps will help you download, install, and set up the Rig.
 
