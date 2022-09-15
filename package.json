@@ -1,5 +1,5 @@
 {
-  "name": "extension-hello-world",
+  "name": "@twitchdev/extension-hello-world",
   "version": "1.0.0",
   "description": "Simple Hello World Twitch Extension",
   "main": "index.js",
