@@ -19,7 +19,7 @@
     "commander": "^2.15.0",
     "hapi": "^17.2.2",
     "inert": "^5.1.0",
-    "jsonwebtoken": "^8.2.0",
+    "jsonwebtoken": "^9.0.0",
     "request": "^2.85.0",
     "selfsigned": "^1.10.2"
   }
